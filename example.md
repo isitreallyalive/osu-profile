@@ -1,8 +1,8 @@
-Last updated: <!-- osu-last-updated -->17/03/2025 00:49 GMT<!-- osu-last-updated -->
+Last updated: <!-- osu-last-updated -->24/03/2025 00:50 GMT<!-- osu-last-updated -->
 
 |      Tag      |          Description           |                                              Value                                               |
 | :-----------: | :----------------------------: | :----------------------------------------------------------------------------------------------: |
-| last-updated  | When was osu-profile last run? |                <!-- osu-last-updated -->17/03/2025 00:49 GMT<!-- osu-last-updated -->                |
+| last-updated  | When was osu-profile last run? |                <!-- osu-last-updated -->24/03/2025 00:50 GMT<!-- osu-last-updated -->                |
 |    avatar     |         URL of avatar          |                 <!-- osu-avatar -->https://a.ppy.sh/16009610<!-- osu-avatar -->                  |
 |      id       |                                |                              <!-- osu-id -->16009610<!-- osu-id -->                              |
 |     name      |            Username            |                            <!-- osu-name -->Newt x3<!-- osu-name -->                             |
@@ -20,8 +20,8 @@ Last updated: <!-- osu-last-updated -->17/03/2025 00:49 GMT<!-- osu-last-updated
 |   300-count   |                                |                      <!-- osu-300-count -->8,612,491<!-- osu-300-count -->                       |
 |  total-score  |                                |                  <!-- osu-total-score -->48,669,914,984<!-- osu-total-score -->                  |
 | ranked-score  |                                |                 <!-- osu-ranked-score -->8,687,050,573<!-- osu-ranked-score -->                  |
-|  global-rank  |                                |                      <!-- osu-global-rank -->72,708<!-- osu-global-rank -->                      |
-| country-rank  |                                |                     <!-- osu-country-rank -->2,708<!-- osu-country-rank -->                      |
+|  global-rank  |                                |                      <!-- osu-global-rank -->73,167<!-- osu-global-rank -->                      |
+| country-rank  |                                |                     <!-- osu-country-rank -->2,722<!-- osu-country-rank -->                      |
 |   ssh-count   |        Silver SS count         |                         <!-- osu-ssh-count -->115<!-- osu-ssh-count -->                          |
 |   ss-count    |                                |                           <!-- osu-ss-count -->45<!-- osu-ss-count -->                           |
 |   sh-count    |         Silver S count         |                          <!-- osu-sh-count -->315<!-- osu-sh-count -->                           |
