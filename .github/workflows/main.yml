@@ -11,6 +11,6 @@ jobs:
         steps:
             - uses: newtykip/osu-profile@v2
               with:
-                profile-id: '16009610'
+                profile-id: '7562902'
                 api-key: ${{ secrets.osu }}
                 file-path: example.md
