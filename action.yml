@@ -13,6 +13,11 @@ inputs:
     required: false
     default: "*.md"
 
+  timezone:
+    description: Timezone to use for the update timestamps.
+    required: false
+    default: "UTC"
+
 runs:
   using: node20
   main: dist/index.js
