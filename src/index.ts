@@ -2,7 +2,7 @@
 
 import * as core from "@actions/core";
 import * as github from "@actions/github";
-import { getFiles } from "./files";
+import { getFiles, writeFiles, type Repo } from "./files/index";
 import Handlebars from "handlebars";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -13,7 +13,9 @@ dayjs.extend(timezone);
 
 // create github client
 const octokit = github.getOctokit(core.getInput("github-token"));
-const files = await getFiles(octokit);
+const [owner, name] = process.env.GITHUB_REPOSITORY.split("/");
+const repo: Repo = { owner, name };
+const files = await getFiles(octokit, repo);
 
 // provide the updated time
 const tz = core.getInput("timezone");
@@ -40,8 +42,14 @@ const newFiles = files.map(({ content, ...file }) => {
       );
     } catch (error) {}
   }
-  console.log(result);
+
   return { content: result, ...file };
 });
 
-// todo: write changed files to the repository
+// write changed files to the repository
+const changedFiles = newFiles.filter((new_) => {
+  const old = files.find((f) => f.path === new_.path);
+  return old && old.content !== new_.content;
+});
+
+await writeFiles(octokit, changedFiles, repo);

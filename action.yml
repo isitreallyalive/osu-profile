@@ -18,6 +18,11 @@ inputs:
     required: false
     default: "UTC"
 
+  branch:
+    description: Branch to run the action on.
+    required: false
+    default: "main"
+
 runs:
   using: node20
   main: dist/index.js
