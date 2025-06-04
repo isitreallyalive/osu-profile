@@ -1,3 +1,5 @@
+// todo: error handling
+
 import * as core from "@actions/core";
 import * as github from "@actions/github";
 import { getFiles } from "./files";
@@ -21,10 +23,25 @@ Handlebars.registerHelper("updated", (template) => {
   return dayjs().tz(tz).format(formatString);
 });
 
-files.map(({ content }) => {
-  const template = Handlebars.compile(content);
-  const newContent = template({
-    yes: "hi",
-  });
-  console.log(newContent);
+const commentRegex = /<!--\s*({{.*?}})\s*-->/gs;
+const newFiles = files.map(({ content, ...file }) => {
+  let result = content;
+  let match: RegExpExecArray;
+
+  while ((match = commentRegex.exec(content)) !== null) {
+    const [full, code] = match;
+    try {
+      const template = Handlebars.compile(code);
+      const output = template({});
+      const multiline = code.includes("\n");
+      result = result.replace(
+        full,
+        `${full}${multiline ? "\n" : ""} ${output}`,
+      );
+    } catch (error) {}
+  }
+  console.log(result);
+  return { content: result, ...file };
 });
+
+// todo: write changed files to the repository
