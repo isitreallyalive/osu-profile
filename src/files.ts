@@ -15,9 +15,9 @@ export async function getFiles(octokit: Octokit): Promise<string[]> {
     .split(",")
     .map((p) => p.trim());
 
-  return allFiles.filter((file) => 
-  patterns.some((pattern) => minimatch(file, pattern))
-);
+  return allFiles.filter((file) =>
+    patterns.some((pattern) => minimatch(file, pattern)),
+  );
 }
 
 async function getFilesRecursively(

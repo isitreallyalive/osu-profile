@@ -9,7 +9,8 @@
   "scripts": {
     "act": "npm run build && gh act",
     "build": "ncc build src/index.ts -m --license licenses.txt",
-    "fmt": "prettier --write src/**/*.ts"
+    "fmt": "prettier --write src/**/*.ts",
+    "prepare": "husky"
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@types/node": "^22.15.29",
     "@vercel/ncc": "^0.38.3",
+    "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3"
   }
