@@ -8,4 +8,3 @@ osu!profile injects statistics about an osu! profile into your readme - or a cus
 You can view an example of it in action [here](example.md)
 
 <sub>licensed with the <a href="license.md">opinionated queer license v1.1</a> - tl;dr see <a href="https://oql.avris.it/">here</a> :]</sub>
-

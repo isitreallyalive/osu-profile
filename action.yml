@@ -1,24 +1,13 @@
 name: osu-profile
-description: Inject information about your osu! profile into your readme!
-author: newtykins
+description: inject information about your osu! profile into your readme!
+author: newt
 
 inputs:
-  profile-id:
-    description: 'The ID of the osu! profile to track'
-    required: true
-  api-key:
-    description: 'Your osu! API key'
-    required: true
-  game-mode:
-    description: 'osu! game mode to track'
-    default: osu
-  file-path:
-    description: 'Path to the file to update'
-  token:
-    description: 'The GitHub token to use for manipulating the repository.'
-    required: true
-    default: ${{ github.token }}
-
+  allowed-files:
+    description: List of allowed file patterns (comma-separated)
+    required: false
+    default: '*.md'
+    
 runs:
   using: node20
   main: dist/index.js

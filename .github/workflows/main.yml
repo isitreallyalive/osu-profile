@@ -1,16 +1,14 @@
-name: update readme
+name: update example
 
 on:
-    schedule:
-        - cron: '0 0 * * 1'
-    workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
 jobs:
-    readme:
-        name: Update readme with the latest stats using osu-profile!
-        runs-on: ubuntu-latest
-        steps:
-            - uses: isitreallyalive/osu-profile@v2
-              with:
-                profile-id: '7562902'
-                api-key: ${{ secrets.osu }}
-                file-path: example.md
+  readme:
+    name: update osu!profile example
+    runs-on: ubuntu-latest
+    steps:
+      - uses: isitreallyalive/osu-profile@main
+        with:
+          allowed-files: "example.md"

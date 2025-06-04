@@ -1,29 +1,19 @@
 {
   "name": "osu-profile",
-  "private": true,
-  "version": "2.0.0",
-  "description": "Inject information about your osu! profile into your readme!",
+  "version": "3.0.0",
+  "author": "newt",
   "main": "dist/index.js",
-  "author": "newtykins",
+  "description": "inject information about your osu! profile into your readme",
   "license": "OQL",
+  "private": true,
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "package": "ncc build -m --license licenses.txt src/index.ts",
-    "prepare": "husky install"
+    "build": "ncc build src/index.ts -m --license licenses.txt"
   },
   "dependencies": {
-    "@actions/core": "^1.10.1",
-    "@actions/github": "^6.0.0",
-    "dayjs": "^1.11.10",
-    "humanize-duration": "^3.31.0",
-    "osu-api-extended": "^2.7.67"
+    "@actions/core": "^1.11.1"
   },
   "devDependencies": {
-    "@types/humanize-duration": "^3.27.3",
-    "@types/node": "^20.10.0",
-    "@vercel/ncc": "^0.38.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.3.2",
-    "husky": "^8.0.0"
+    "@vercel/ncc": "^0.38.3",
+    "typescript": "^5.8.3"
   }
 }
