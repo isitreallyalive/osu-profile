@@ -10,6 +10,7 @@ jobs:
     name: update osu!profile example
     runs-on: ubuntu-latest
     steps:
-      - uses: isitreallyalive/osu-profile@main
+      - uses: actions/checkout@v4
+      - uses: ./
         with:
           allowed-files: "example.md"

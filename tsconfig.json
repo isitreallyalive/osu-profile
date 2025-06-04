@@ -1,6 +1,7 @@
 {
-	"compilerOptions": {
-	  "target": "es2015",
-	  "moduleResolution": "node"
-	}
+  "compilerOptions": {
+     "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node"
+  }
 }
